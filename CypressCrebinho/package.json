@@ -1,27 +1,24 @@
 {
-  "name": "curso-cypress-v2",
-  "version": "1.0.0",
-  "description": "Repositório da versão 2 do curso básico de Cypress da Escola Talking About Testing",
-  "main": "src/index.html",
-  "scripts": {
-    "cy:open": "cypress open",
-    "test": "cypress run"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wlsf82/cypress-basico-v2.git"
-  },
-  "keywords": [
-    "Testing",
-    "Cypress.io",
-    "Talking About Testing",
-    "Cypress Básico",
-    "Escola TAT"
-  ],
-  "author": "Walmyr Filho <wlsf82@gmail.com> (https://walmyr.dev/)",
-  "license": "MIT",
-  "homepage": "https://github.com/wlsf82/cypress-basico-v2#readme",
   "devDependencies": {
-    "cypress": "^9.5.1"
+    "cypress": "^13.6.6"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.2",
+    "@cypress/browserify-preprocessor": "^3.0.2"
+  },
+
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e/steps/**/*.steps.js",
+    "filterSpecs": true,
+    "omitFiltered": true,
+    "json": {
+      "enabled": true,
+      "formatter": "cypress/reports/json/cucumber-json-formatter",
+      "output": "cypress/reports/json/cucumber-report.json"
+    },
+    "messages": {
+      "enabled": true,
+      "output": "cypress/reports/messages/cucumber-messages.ndjson"
+    }
   }
 }
