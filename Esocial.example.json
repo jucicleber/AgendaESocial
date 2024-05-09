@@ -1,0 +1,6 @@
+{
+    "autentication":{
+        "login": "Acesso para entrar no sistema, usr_login",
+        "senha": "Senha para entrar no sistema, pegar da extranet"
+    }
+}

@@ -13,7 +13,7 @@ module.exports = defineConfig({
 
   e2e: {
     setupNodeEvents,
-    baseUrl: 'https://proxima.sisprevweb.com.br/PortalTransparencia01/admin',
+    baseUrl: 'https://proxima.sisprevweb.com.br/esocial_testeaut/',
     watchForFileChanges:false,
     video: false,
     chromeWebSecurity: false,

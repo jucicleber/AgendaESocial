@@ -21,6 +21,12 @@ class LoginPage{
     verificarUsuarioLogado(){
         cy.contains(eSocial.autentication.login).should('be.visible')
     }
+    LoginComSelecaoDeOrigemDeDados(){
+        this.acessarHost()
+        this.logarESocial()
+        this.selecionarOrigemDados()
+        this.verificarUsuarioLogado()
+    }
 }
 
 export default new LoginPage()

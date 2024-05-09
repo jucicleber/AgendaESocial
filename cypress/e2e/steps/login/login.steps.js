@@ -6,7 +6,7 @@ Given("O usuário navegue até a tela de autenticação", () => {
     loginPages.acessarHost()
 })
 
-When("Informar o usuário, senha e clicar em acessar", () => {
+When("Informar o usuário e senha após clicar em acessar", () => {
     loginPages.logarESocial()
 })
 
