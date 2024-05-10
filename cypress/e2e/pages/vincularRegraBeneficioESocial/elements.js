@@ -1,8 +1,8 @@
 export const elements = {
     //Botões e Selects
     NomeDaTabela: 'Vincular Regra de Benefício ao eSocial (Tabela 25)',
-    averiguandoParidade: '[placeholder="Paridade:"]',
     consultaDeRegras: 'Consulta de Regras',
+    ClickConsultaRegra: '[placeholder="Consulta de Regras"]',
     btnPesquisar: 'Pesquisar',
     editarRegistro: '[title="CLIQUE PARA EDITAR O REGISTRO"]',
     gridItensPorPagina: 'Itens por página:',
@@ -11,6 +11,11 @@ export const elements = {
     paginadorUltimaPagina: '[aria-label="Última página"]',
     paginadorPaginaAnterior: '[aria-label="Página anterior"]',
     paginadorPrimeiraPagina: '[aria-label="Primeira página"]',
+    averiguandoParidade: '[placeholder="Paridade:"]',
+    selectParidadeSim: 'mat-option:nth-of-type(2) > .mat-option-text',
+    selectParidadeNao: 'mat-option:nth-of-type(3) > .mat-option-text',
+    regraAposentadoriaVoluntaria: 'Apos. Voluntária Tempo',
+
     //Colunas
     colunaPreencherEditar: 'PREENCHER/EDITAR',
     colunDescriçãoRegra: 'Descrição da Regra',

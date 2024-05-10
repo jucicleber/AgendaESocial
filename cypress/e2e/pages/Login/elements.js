@@ -6,4 +6,5 @@ export const elements = {
     validaLogin: '[formcontrolname="origem"]',
     selectItemTESTEAUT: '[ng-reflect-klass] [role="option"]:nth-of-type(5)',
     btnConfirmar: 'Confirmar'
+    
 }

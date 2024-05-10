@@ -1,7 +1,7 @@
 Feature: Login
     Como usuário desejo autenticar no eSocial
 
-    Scenario: Autenticação ESocial  
+    Scenario: Autenticar no eSocial
 
     Given O usuário navegue até a tela de autenticação
     When Informar o usuário e senha após clicar em acessar

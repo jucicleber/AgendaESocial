@@ -18,6 +18,25 @@ class VincularRegraBeneficioESocial{
     cy.get(elements.paginadorProximaPagina).should('be.visible')
     cy.get(elements.paginadorUltimaPagina).should('be.visible')
    }
+
+   SelecionaParidade(paridade){
+      cy.get(elements.averiguandoParidade).should('be.visible').click()
+      if(paridade === 'Sim'){
+         cy.get(elements.selectParidadeSim).click()
+      }else if (paridade === 'Não'){
+         cy.get(elements.selectParidadeNao).click()
+      }else{ 
+         cy.log("deu erro")
+      }
+   
+   }
+   InserindoRegra(){
+      cy.get(elements.ClickConsultaRegra).click().type(elements.regraAposentadoriaVoluntaria)
+   }
+   ClickBotaoPesquisar(){
+      cy.contains(elements.btnPesquisar).click()
+   }
 }
+
 
 export default new VincularRegraBeneficioESocial()

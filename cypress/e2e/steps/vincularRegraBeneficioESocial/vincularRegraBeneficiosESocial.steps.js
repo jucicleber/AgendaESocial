@@ -4,7 +4,7 @@ import sideBarPages from '../../pages/sideBar/sideBar.pages'
 import vincularRegraBeneficioESocialPages from '../../pages/vincularRegraBeneficioESocial/vincularRegraBeneficioESocial.pages';
 
 
-
+//Scenario 1
 Given("O usuário estar autenticado no sistema", () => {
     loginPages.LoginComSelecaoDeOrigemDeDados()    
 })
@@ -15,6 +15,12 @@ When("O usuário estar na tela de Vincular regra de benefício", () => {
 
 Then("Averiguar os nomes dos botoes e colunas da tela", () => {
     vincularRegraBeneficioESocialPages.ValidandoCampos()
+})
+
+//Scenario 2
+Then("Realizar a consulta por paridade e consulta das regras", () => {
+    vincularRegraBeneficioESocialPages.SelecionaParidade('Sim')
+    vincularRegraBeneficioESocialPages.InserindoRegra()
 })
 
 
