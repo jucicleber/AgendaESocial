@@ -33,8 +33,29 @@ class VincularRegraBeneficioESocial{
    InserindoRegra(){
       cy.get(elements.ClickConsultaRegra).click().type(elements.regraAposentadoriaVoluntaria)
    }
+
+   AlterandoValorItensPorPagina(){
+      cy.get(elements.ItensPorPagina).click()
+      cy.get(elements.ItensPorPagina100).click()
+   }
    ClickBotaoPesquisar(){
       cy.contains(elements.btnPesquisar).click()
+   }
+   AveriguaColunaDescricaoRegra(){
+      cy.contains(elements.itensEncontrados)
+   }
+   AveriguandoQuantasVezesARegraAparece(){      
+      cy.get(elements.colunaContendoADescricaoDaRegra).then((itens) => {
+         cy.log('cy.log itens', itens)
+         console.log('resultado dos itens: ', itens)
+         for (var i = 0; i < itens.length -1; i++){
+           if(this.AveriguaColunaDescricaoRegra === elements.regraAposentadoriaVoluntaria){
+            cy.log('correto')
+           }else{
+            cy.log('errado cacaroto')
+           }          
+         }
+      })
    }
 }
 

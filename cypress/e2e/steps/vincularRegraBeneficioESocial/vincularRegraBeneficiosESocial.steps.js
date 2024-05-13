@@ -21,6 +21,10 @@ Then("Averiguar os nomes dos botoes e colunas da tela", () => {
 Then("Realizar a consulta por paridade e consulta das regras", () => {
     vincularRegraBeneficioESocialPages.SelecionaParidade('Sim')
     vincularRegraBeneficioESocialPages.InserindoRegra()
+    vincularRegraBeneficioESocialPages.AlterandoValorItensPorPagina()
+    vincularRegraBeneficioESocialPages.ClickBotaoPesquisar()
+    vincularRegraBeneficioESocialPages.AveriguaColunaDescricaoRegra()
+    vincularRegraBeneficioESocialPages.AveriguandoQuantasVezesARegraAparece()
 })
 
 
