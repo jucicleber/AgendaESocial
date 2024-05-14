@@ -7,7 +7,7 @@ class VincularRegraBeneficioESocial{
     cy.contains(elements.consultaDeRegras).should('be.visible')
     cy.contains(elements.btnPesquisar).should('be.visible')
     cy.contains(elements.colunaPreencherEditar).should('be.visible')
-    cy.contains(elements.colunDescriçãoRegra).should('be.visible')
+    cy.contains(elements.colunaDescricaoRegra).should('be.visible')
     cy.contains(elements.colunFundamentacaoLegal).should('be.visible')
     cy.contains(elements.colunTipoBeneficio).should('be.visible')
     cy.contains(elements.colunCodSocial).should('be.visible')
@@ -41,21 +41,32 @@ class VincularRegraBeneficioESocial{
    ClickBotaoPesquisar(){
       cy.contains(elements.btnPesquisar).click()
    }
-   AveriguaColunaDescricaoRegra(){
-      cy.contains(elements.itensEncontrados)
-   }
-   AveriguandoQuantasVezesARegraAparece(){      
+  
+   
+   AveriguandoQuantasVezesARegraAparece(){    
       cy.get(elements.colunaContendoADescricaoDaRegra).then((itens) => {
-         cy.log('cy.log itens', itens)
          console.log('resultado dos itens: ', itens)
-         for (var i = 0; i < itens.length -1; i++){
-           if(this.AveriguaColunaDescricaoRegra === elements.regraAposentadoriaVoluntaria){
-            cy.log('correto')
-           }else{
-            cy.log('errado cacaroto')
-           }          
+         for (var i = 2; i <= itens.length ; i++){ 
+            var coluna = `:nth-child(${i}) > .cdk-column-Nome`
+            cy.get(coluna).contains(elements.regraAposentadoriaVoluntaria)
          }
       })
+   }
+   AveriguandoFormulario(){
+      var ind = parseInt(2,10)
+      cy.get(elements.clickEditar).then((itens) => {
+         cy.log('TESTEEEEEEEEEEEEEEEEEEEEEEE')
+         cy.log('valor de itens', itens)
+         cy.log('valor de itens comprimento', itens.length)
+         for (var i = 2; i <= itens.length ; i++){
+            cy.log('teste 1')
+            var col = `:nth-child(${i}) > .cdk-column-editar > .mat-icon-button > .mat-button-wrapper > .mat-icon`
+            cy.log('teste 2')
+            cy.get(col).click()
+            cy.get(elements.editarRegraBeneficio).contains(elements.regraAposentadoriaVoluntaria)
+            cy.get(elements.editarParidade).contains(elements.selectParidadeSim)
+         }
+      })  
    }
 }
 

@@ -18,12 +18,16 @@ export const elements = {
     ItensPorPagina:'[aria-label="Itens por página:"]',
     ItensPorPagina100: 'mat-option:nth-of-type(4) > .mat-option-text',
     colunaContendoADescricaoDaRegra: '.cdk-column-Nome',
-    colunaDescricaoregra: 'mat-cell cdk-column-Nome mat-column-Nome ng-star-inserted',
+    colunaDescricaoregra: 'mat-row:nth-of-type(1) > mat-cell:nth-of-type(2)',
     itensEncontrados: 'mat-row:nth-of-type(1) > mat-cell:nth-of-type(2)',
+    clickEditar:".cdk-column-editar > .mat-icon-button",
+    clickEditarRegra: ':nth-child(2) > .cdk-column-editar > .mat-icon-button > .mat-button-wrapper > .mat-icon',
+    editarRegraBeneficio: '[ng-reflect-placeholder="Regra de benefício"]',
+    editarParidade: '[ng-reflect-placeholder="Paridade"]',
         
     //Colunas
     colunaPreencherEditar: 'PREENCHER/EDITAR',
-    colunDescriçãoRegra: 'Descrição da Regra',
+    colunaDescricaoRegra: 'Descrição da Regra',
     colunFundamentacaoLegal: 'Fundamentação Legal',
     colunTipoBeneficio: 'Tipo de Benefício',
     colunCodSocial: 'Cód. eSocial',

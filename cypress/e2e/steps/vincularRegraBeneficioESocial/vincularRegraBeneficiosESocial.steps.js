@@ -23,8 +23,8 @@ Then("Realizar a consulta por paridade e consulta das regras", () => {
     vincularRegraBeneficioESocialPages.InserindoRegra()
     vincularRegraBeneficioESocialPages.AlterandoValorItensPorPagina()
     vincularRegraBeneficioESocialPages.ClickBotaoPesquisar()
-    vincularRegraBeneficioESocialPages.AveriguaColunaDescricaoRegra()
     vincularRegraBeneficioESocialPages.AveriguandoQuantasVezesARegraAparece()
+    vincularRegraBeneficioESocialPages.AveriguandoFormulario()
 })
 
 
