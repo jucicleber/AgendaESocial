@@ -22,8 +22,9 @@ export const elements = {
     itensEncontrados: 'mat-row:nth-of-type(1) > mat-cell:nth-of-type(2)',
     clickEditar:".cdk-column-editar > .mat-icon-button",
     clickEditarRegra: ':nth-child(2) > .cdk-column-editar > .mat-icon-button > .mat-button-wrapper > .mat-icon',
-    editarRegraBeneficio: '[ng-reflect-placeholder="Regra de benefício"]',
+    editarRegraBeneficio: '[formcontrolname="Nome"]',
     editarParidade: '[ng-reflect-placeholder="Paridade"]',
+    editarBotaoFechar: 'Fechar',
         
     //Colunas
     colunaPreencherEditar: 'PREENCHER/EDITAR',

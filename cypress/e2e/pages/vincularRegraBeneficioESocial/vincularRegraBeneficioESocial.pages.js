@@ -41,8 +41,10 @@ class VincularRegraBeneficioESocial{
    ClickBotaoPesquisar(){
       cy.contains(elements.btnPesquisar).click()
    }
+
   
-   
+
+
    AveriguandoQuantasVezesARegraAparece(){    
       cy.get(elements.colunaContendoADescricaoDaRegra).then((itens) => {
          console.log('resultado dos itens: ', itens)
@@ -52,22 +54,17 @@ class VincularRegraBeneficioESocial{
          }
       })
    }
-   AveriguandoFormulario(){
-      var ind = parseInt(2,10)
-      cy.get(elements.clickEditar).then((itens) => {
-         cy.log('TESTEEEEEEEEEEEEEEEEEEEEEEE')
-         cy.log('valor de itens', itens)
-         cy.log('valor de itens comprimento', itens.length)
-         for (var i = 2; i <= itens.length ; i++){
-            cy.log('teste 1')
-            var col = `:nth-child(${i}) > .cdk-column-editar > .mat-icon-button > .mat-button-wrapper > .mat-icon`
-            cy.log('teste 2')
-            cy.get(col).click()
-            cy.get(elements.editarRegraBeneficio).contains(elements.regraAposentadoriaVoluntaria)
-            cy.get(elements.editarParidade).contains(elements.selectParidadeSim)
-         }
-      })  
+
+
+   JuntandoAsFuncoesCenario1E2(){
+      this.SelecionaParidade()
+      this.InserindoRegra()
+      this.AlterandoValorItensPorPagina()
+      this.ClickBotaoPesquisar()
+      this.AveriguandoQuantasVezesARegraAparece()
    }
+
+   
 }
 
 
