@@ -6,17 +6,17 @@ Feature: Consultar
         Given O usuário estar autenticado no sistema
         When O usuário estar na tela de Vincular regra de benefício
 
-Scenario: Verifica se todos elementos estão sendo apresentados
-          
-    Then Averiguar os nomes dos botoes e colunas da tela
+    Scenario: Verifica se todos elementos estão sendo apresentados
+            
+        Then Averiguar os nomes dos botoes e colunas da tela
 
-Scenario: Realizar consulta por paridade e regra
+    Scenario: Realizar consulta por paridade e regra
 
-    Then Realizar a consulta por paridade e consulta das regras
+        Then Realizar a consulta por paridade e consulta das regras
 
-Scenario: Validar formulario
+    Scenario: Validar formulario
 
-    Then Validar o formulario aberto ao clicar em editar
+        Then Validar o formulario aberto ao clicar em editar
 
 
 

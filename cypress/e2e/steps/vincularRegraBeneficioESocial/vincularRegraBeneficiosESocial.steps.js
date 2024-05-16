@@ -26,6 +26,14 @@ Then("Realizar a consulta por paridade e consulta das regras", () => {
     vincularRegraBeneficioESocialPages.AveriguandoQuantasVezesARegraAparece()
 })
 
+//Scenario 3
+
+Then("Validar o formulario aberto ao clicar em editar", () => {
+    vincularRegraBeneficioESocialPages.ConsultaRegraBeneficio('Não')
+    vincularRegraBeneficioESocialPages.AveriguandoFormularioDeRegraEParidade()
+
+})
+
 
 
 

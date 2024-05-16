@@ -1,8 +1,8 @@
 export const elements = {
     //Botões e Selects
-    NomeDaTabela: 'Vincular Regra de Benefício ao eSocial (Tabela 25)',
+    txtNomeDaTabela: 'Vincular Regra de Benefício ao eSocial (Tabela 25)',
     consultaDeRegras: 'Consulta de Regras',
-    ClickConsultaRegra: '[placeholder="Consulta de Regras"]',
+    clickConsultaRegra: '[placeholder="Consulta de Regras"]',
     btnPesquisar: 'Pesquisar',
     editarRegistro: '[title="CLIQUE PARA EDITAR O REGISTRO"]',
     gridItensPorPagina: 'Itens por página:',
@@ -14,7 +14,7 @@ export const elements = {
     averiguandoParidade: '[placeholder="Paridade:"]',
     selectParidadeSim: 'mat-option:nth-of-type(2) > .mat-option-text',
     selectParidadeNao: 'mat-option:nth-of-type(3) > .mat-option-text',
-    regraAposentadoriaVoluntaria: 'Apos. Voluntária Tempo',
+    inputRegraAposentadoriaVoluntaria: 'Apos. Voluntária Tempo',
     ItensPorPagina:'[aria-label="Itens por página:"]',
     ItensPorPagina100: 'mat-option:nth-of-type(4) > .mat-option-text',
     colunaContendoADescricaoDaRegra: '.cdk-column-Nome',
@@ -22,9 +22,9 @@ export const elements = {
     itensEncontrados: 'mat-row:nth-of-type(1) > mat-cell:nth-of-type(2)',
     clickEditar:".cdk-column-editar > .mat-icon-button",
     clickEditarRegra: ':nth-child(2) > .cdk-column-editar > .mat-icon-button > .mat-button-wrapper > .mat-icon',
-    editarRegraBeneficio: '[formcontrolname="Nome"]',
-    editarParidade: '[ng-reflect-placeholder="Paridade"]',
-    editarBotaoFechar: 'Fechar',
+    formularioRegraBeneficio: '[formcontrolname="Nome"]',
+    formularioParidade: '[ng-reflect-placeholder="Paridade"]',
+    formularioBotaoFechar: 'Fechar',
         
     //Colunas
     colunaPreencherEditar: 'PREENCHER/EDITAR',
