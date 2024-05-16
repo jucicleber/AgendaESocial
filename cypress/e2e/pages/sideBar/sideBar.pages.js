@@ -4,7 +4,7 @@ class sideBarPages{
     clicarMenuConfiguracoes(){
         cy.contains(elements.selectMenuConfiguracoes).click()
     }
-    navegarParaVincularRegraBeneficio(){
+    NavegarParaVincularRegraBeneficio(){
         this.clicarMenuConfiguracoes()
         cy.contains(elements.itemMenuVincularRegraBeneficio).click()
     }

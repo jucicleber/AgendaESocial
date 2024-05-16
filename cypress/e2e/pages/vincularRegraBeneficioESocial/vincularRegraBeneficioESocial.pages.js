@@ -14,11 +14,11 @@ class VincularRegraBeneficioESocial{
       }
    
    }
-   InserindoRegra(){
+   ConsultandoRegra(){
       cy.get(elements.clickConsultaRegra).click().type(elements.inputRegraAposentadoriaVoluntaria)
    }
 
-   AlterandoValorItensPorPagina(){
+   AlteraValorItensPorPagina(){
       cy.get(elements.ItensPorPagina).click()
       cy.get(elements.ItensPorPagina100).click()
    }
@@ -29,7 +29,7 @@ class VincularRegraBeneficioESocial{
   
 
 
-   AveriguandoQuantasVezesARegraAparece(){    
+   VerificaRegraAparece(){    
       cy.get(elements.colunaContendoADescricaoDaRegra).then((itens) => {
          console.log('resultado dos itens: ', itens)
          for (var i = 2; i <= itens.length ; i++){ 
@@ -40,12 +40,12 @@ class VincularRegraBeneficioESocial{
    }
 
 
-   ConsultaRegraBeneficio(selecionParidade){
-      this.SelecionaParidade(selecionParidade)
-      this.InserindoRegra()
-      this.AlterandoValorItensPorPagina()
+   ConsultaRegraBeneficio(selecionaParidade){
+      this.SelecionaParidade(selecionaParidade)
+      this.ConsultandoRegra()
+      this.AlteraValorItensPorPagina()
       this.ClickBotaoPesquisar()
-      this.AveriguandoQuantasVezesARegraAparece()
+      this.VerificaRegraAparece()
    }
 
    AveriguandoFormularioDeRegraEParidade(){
@@ -65,7 +65,7 @@ class VincularRegraBeneficioESocial{
       })  
    }
 
-  ValidandoCampos(){
+   VerificarCampos(){
    cy.get('h1').contains(elements.txtNomeDaTabela).should('be.visible')
    cy.get(elements.averiguandoParidade).should('be.visible')
    cy.contains(elements.consultaDeRegras).should('be.visible')

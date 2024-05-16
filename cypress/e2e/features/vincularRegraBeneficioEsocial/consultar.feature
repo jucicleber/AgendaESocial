@@ -1,4 +1,4 @@
-Feature: Consultar 
+Feature: Consultar vinculo de regra beneficio eSocial
     Visualizar a presença de todos os elementos
 
     Background: Passos padrões
@@ -6,19 +6,24 @@ Feature: Consultar
         Given O usuário estar autenticado no sistema
         When O usuário estar na tela de Vincular regra de benefício
 
-    Scenario: Verifica se todos elementos estão sendo apresentados
+    Scenario: Verifica a presença de todos os elementos da página
             
-        Then Averiguar os nomes dos botoes e colunas da tela
+        Then Deve verificar a presença de todos os elementos na tela
 
     Scenario: Realizar consulta por paridade e regra
-
-        Then Realizar a consulta por paridade e consulta das regras
+        
+        When Informa a paridade como Sim, e a descrição da regra
+        When Clicar no botão pesquisar para realizar a consulta
+        Then Deve verificar os registros apresentados na tabela
+        
 
     Scenario: Validar formulario
-
-        Then Validar o formulario aberto ao clicar em editar
-
-
+        
+        When Informa a paridade como Sim, e a descrição da regra
+        When Clicar no botão pesquisar para realizar a consulta 
+        Then Deve verificar se a paridade e a descricao da regra informadas estão sendo apresentados no formulario
+        
+        
 
    
     

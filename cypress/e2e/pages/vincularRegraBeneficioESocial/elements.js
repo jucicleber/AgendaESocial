@@ -1,12 +1,8 @@
 export const elements = {
-    //Botões e Selects
-    txtNomeDaTabela: 'Vincular Regra de Benefício ao eSocial (Tabela 25)',
-    consultaDeRegras: 'Consulta de Regras',
+    //Botões e Selects  
     clickConsultaRegra: '[placeholder="Consulta de Regras"]',
     btnPesquisar: 'Pesquisar',
-    editarRegistro: '[title="CLIQUE PARA EDITAR O REGISTRO"]',
-    gridItensPorPagina: 'Itens por página:',
-    itensPorPagina:'Itens por página:',
+    editarRegistro: '[title="CLIQUE PARA EDITAR O REGISTRO"]',   
     paginadorProximaPagina:'[aria-label="Próxima página"]',
     paginadorUltimaPagina: '[aria-label="Última página"]',
     paginadorPaginaAnterior: '[aria-label="Página anterior"]',
@@ -25,7 +21,15 @@ export const elements = {
     formularioRegraBeneficio: '[formcontrolname="Nome"]',
     formularioParidade: '[ng-reflect-placeholder="Paridade"]',
     formularioBotaoFechar: 'Fechar',
-        
+    
+    //Textos
+    txtNomeDaTabela: 'Vincular Regra de Benefício ao eSocial (Tabela 25)',
+    consultaDeRegras: 'Consulta de Regras',
+    itensPorPagina:'Itens por página:',
+
+
+
+
     //Colunas
     colunaPreencherEditar: 'PREENCHER/EDITAR',
     colunaDescricaoRegra: 'Descrição da Regra',
