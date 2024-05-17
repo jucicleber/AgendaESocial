@@ -1,7 +1,7 @@
-Feature: Consultar vinculo de regra beneficio eSocial
-    Visualizar a presença de todos os elementos
+Feature: Consultar vinculo de regra de beneficio ao eSocial
+    Averiguar as consultas e os elementos da tela de vinculo de regra beneficio ao eSocial
 
-    Background: Passos padrões
+    Background: Autenticação e acesso a tela de vinculação de regra de benefício
 
         Given O usuário estar autenticado no sistema
         When O usuário estar na tela de Vincular regra de benefício

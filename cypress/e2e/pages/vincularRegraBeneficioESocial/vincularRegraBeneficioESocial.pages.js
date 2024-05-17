@@ -25,10 +25,7 @@ class VincularRegraBeneficioESocial{
    ClickBotaoPesquisar(){
       cy.contains(elements.btnPesquisar).click()
    }
-
-  
-
-
+   
    VerificaRegraAparece(){    
       cy.get(elements.colunaContendoADescricaoDaRegra).then((itens) => {
          console.log('resultado dos itens: ', itens)
