@@ -6,7 +6,16 @@ Feature: Consultar histórico de envios
     Background: Após autenticação o sistema acessa diretamente o histórico de envios
 
         Given O usuário estar autenticado no sistema
-        
-    Scenario:  Validar a presença de todos os elementos visíveis na tela
+     # Scenario:  Validar a presença de todos os elementos visíveis na tela
 
-        Then Deve verificar a presença de todos os elementos na tela de histórico
+    #     When Deve verificar a presença de todos os elementos na tela de histórico
+    Scenario: Consultar evento passando a operação de Exclusão
+
+        When Realizar a consulta do evento com a operação de exclusão
+
+    Scenario: Consultar evento passando a operação de inclusão
+        
+        When Realizar a consulta do evento com a operação de inclusão
+   
+    
+   

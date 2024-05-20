@@ -3,12 +3,13 @@ export const elements = {
     btnBaixarLogDeEnvio: 'Baixar Log de Envio',
     btnPesquisar: 'Pesquisar',
     selectItensPorpagina: '[ng-reflect-aria-label="Itens por página:"]',
+    selectExclusao: '#mat-option-2',
     //Consultando elementos vissíveis na tela
     txtNomeDaTela: 'Histórico de Envios',
     abaProcessamentoIndividual: 'Processamento Individual',
     abaProcessamentoEmLote: 'Processamento em Lote',
     inputEvento:'[placeholder="Evento"]',
-    inputOperacao:'Operação',
+    inputOperacao:'[placeholder="Operação"]',
     inputDataEnvio: '[placeholder="Data Envio "]',
     inputStatus: '[ng-reflect-placeholder="Status"]',
     //Colunas da tabela

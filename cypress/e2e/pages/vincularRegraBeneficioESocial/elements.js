@@ -20,16 +20,11 @@ export const elements = {
     clickEditarRegra: ':nth-child(2) > .cdk-column-editar > .mat-icon-button > .mat-button-wrapper > .mat-icon',
     formularioRegraBeneficio: '[formcontrolname="Nome"]',
     formularioParidade: '[ng-reflect-placeholder="Paridade"]',
-    formularioBotaoFechar: 'Fechar',
-    
+    formularioBotaoFechar: 'Fechar',    
     //Textos
     txtNomeDaTabela: 'Vincular Regra de Benefício ao eSocial (Tabela 25)',
     consultaDeRegras: 'Consulta de Regras',
     itensPorPagina:'Itens por página:',
-
-
-
-
     //Colunas
     colunaPreencherEditar: 'PREENCHER/EDITAR',
     colunaDescricaoRegra: 'Descrição da Regra',

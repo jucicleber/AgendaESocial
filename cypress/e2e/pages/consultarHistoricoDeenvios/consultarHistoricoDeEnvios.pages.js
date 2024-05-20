@@ -2,6 +2,7 @@ import { elements } from "../consultarHistoricoDeenvios/elements";
 import loginPages from "../Login/login.pages";
 
 
+
 class consultarHistoricoDeenvios{
 
     realizarLogincomSelecaoDeorigemDeDados(){
@@ -35,6 +36,36 @@ class consultarHistoricoDeenvios{
         cy.get(elements.proximaPagina).should('be.visible')
         cy.get(elements.ultimaPágina).should('be.visible')
        }
-}
+    
+ 
+       SelecionaEventoComOperacaoExclusao(eventosExclusao,operacao){
+        eventosExclusao.forEach(evento => {
+            cy.log('vetor do evento',eventosExclusao)
+            cy.log('número do evento',evento)
+            cy.get(elements.inputEvento).click().type(evento)
+            cy.get(elements.inputOperacao).click()
+            cy.get(operacao).click()
+            cy.contains(elements.btnPesquisar).click()
+            cy.get(elements.inputEvento).clear()
+            });
+            
+            }
+        SelecionaEventoComOperacaoInclusao(eventosInclusao,operacao){
+        eventosInclusao.forEach(evento => {
+            cy.log('vetor do evento',eventosInclusao)
+            cy.log('número do evento',evento)
+            cy.get(elements.inputEvento).click().type(evento)
+            cy.get(elements.inputOperacao).click()
+            cy.get(operacao).click()
+            cy.contains(elements.btnPesquisar).click()
+            cy.get(elements.inputEvento).clear()
+          })  
+        }
+            
+        }  
+    
+          
+   
+
 
 export default new consultarHistoricoDeenvios()
