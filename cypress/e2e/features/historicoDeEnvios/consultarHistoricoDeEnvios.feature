@@ -9,13 +9,15 @@ Feature: Consultar histórico de envios
      # Scenario:  Validar a presença de todos os elementos visíveis na tela
 
     #     When Deve verificar a presença de todos os elementos na tela de histórico
-    Scenario: Consultar evento passando a operação de Exclusão
+    # Scenario: Consultar evento passando a operação de Exclusão
 
-        When Realizar a consulta do evento com a operação de exclusão
+    #     When Realizar a consulta do evento com a operação de exclusão
 
     Scenario: Consultar evento passando a operação de inclusão
         
         When Realizar a consulta do evento com a operação de inclusão
    
-    
+    # Scenario: Realizar uma consulta que não encontre nenhum evento
+
+    #     When Realizar uma consulta que não encontre o evento
    

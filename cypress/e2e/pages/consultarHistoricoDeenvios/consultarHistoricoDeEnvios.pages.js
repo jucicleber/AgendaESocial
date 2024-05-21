@@ -1,5 +1,7 @@
 import { elements } from "../consultarHistoricoDeenvios/elements";
 import loginPages from "../Login/login.pages";
+import input from "../../../fixtures/input.json"
+
 
 
 
@@ -50,19 +52,52 @@ class consultarHistoricoDeenvios{
             });
             
             }
-        SelecionaEventoComOperacaoInclusao(eventosInclusao,operacao){
-        eventosInclusao.forEach(evento => {
-            cy.log('vetor do evento',eventosInclusao)
-            cy.log('número do evento',evento)
-            cy.get(elements.inputEvento).click().type(evento)
-            cy.get(elements.inputOperacao).click()
-            cy.get(operacao).click()
-            cy.contains(elements.btnPesquisar).click()
-            cy.get(elements.inputEvento).clear()
-          })  
+        SelecionaEventoComOperacaoInclusao(eventosInclusao, operacao) {
+            eventosInclusao.forEach(evento => {
+                cy.log('vetor do evento', eventosInclusao);
+                cy.log('número do evento', evento);
+                this.PesquisarHistoricoEnvio(evento,operacao)
+                // Verifica a coluna resultante comparando com a pesquisa
+                for (let i = 2; i <= eventosInclusao.length + 1; i++) {
+                    let coluna = `mat-row:nth-of-type(${i}) > mat-cell:nth-of-type(2)`;
+                    cy.get(coluna).invoke('text').then(textoColuna => {
+                        if (textoColuna.trim() === operacao ) { 
+                            cy.log(`Evento encontrado na linha ${i - 1}`);
+                        } else {
+                            cy.log(`Evento não encontrado na linha ${i - 1}`);
+                        }
+                    });
+                }
+        
+                cy.get(elements.inputEvento).clear();
+            });
         }
             
-        }  
+        PesquisarHistoricoEnvio(evento,operacao){
+            // Acessa a grid passando evento e operação como parâmetro de função
+            cy.get(elements.inputEvento).click().type(evento);
+            cy.get(elements.inputOperacao).click();
+            cy.get(operacao).click();
+            cy.contains(elements.btnPesquisar).click();
+        }
+
+
+        SelecionaEventoMasNaoEncontra(){
+            cy.get(elements.inputEvento).click().type(elements.eventoInexistente)
+            cy.contains(elements.btnPesquisar).click()
+            cy.contains(elements.mensagemDeEventoNaoEncontrado).should("be.visible")
+        }
+
+        LerTableHistorico(linha = 1) {
+            cy.get('mat-table').find('mat-row').each((row) => {
+            cy.get('mat-row').contains('2416')
+            cy.get('mat-row').contains('Inclusão')
+            })
+
+        }
+        
+    
+}  
     
           
    

@@ -28,4 +28,6 @@ export const elements = {
     paginaAnterior: '.mat-icon-button.mat-paginator-navigation-previous  .mat-paginator-icon',
     txtItensPorPagina: 'Itens por página:',
     txtLimitadorDePaginas: '.mat-paginator-range-label',
+    eventoInexistente: "102030",
+    mensagemDeEventoNaoEncontrado: "Nenhum evento enviado!",
 }

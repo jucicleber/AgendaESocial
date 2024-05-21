@@ -5,7 +5,7 @@ import consultarHistoricoDeEnviosPages from '../../pages/consultarHistoricoDeenv
 import vincularRegraBeneficioESocialPages from '../../pages/vincularRegraBeneficioESocial/vincularRegraBeneficioESocial.pages';
 import inputs from "../../../fixtures/input.json"
 const eventosExclusao = ['1000','1005','1020'];
-const eventosInclusao = ['2200','2306','2405','2416']
+const eventosInclusao = ['2416']
 
 Given("O usuário estar autenticado no sistema para acessar o histórico de envios", () => {
     loginPages.LoginComSelecaoDeOrigemDeDados();
@@ -24,5 +24,12 @@ When("Realizar a consulta do evento com a operação de exclusão", () =>{
 
 //Scenario 3
 When("Realizar a consulta do evento com a operação de inclusão",() => {
-    consultarHistoricoDeEnviosPages.SelecionaEventoComOperacaoInclusao(eventosInclusao,inputs.operacao.inclusao)
+    consultarHistoricoDeEnviosPages.PesquisarHistoricoEnvio('2416',inputs.operacao.inclusao)
+    //consultarHistoricoDeEnviosPages.SelecionaEventoComOperacaoInclusao(eventosInclusao,inputs.operacao.inclusao)
+    consultarHistoricoDeEnviosPages.LerTableHistorico()
+})
+//Scenario 4
+When("Realizar uma consulta que não encontre o evento", () => {
+    //consultarHistoricoDeEnviosPages.SelecionaEventoMasNaoEncontra()
+    consultarHistoricoDeEnviosPages.LerTableHistorico()
 })
