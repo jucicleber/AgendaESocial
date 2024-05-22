@@ -4,6 +4,10 @@ export const elements = {
     btnPesquisar: 'Pesquisar',
     selectItensPorpagina: '[ng-reflect-aria-label="Itens por página:"]',
     selectExclusao: '#mat-option-2',
+    selectinclusao: '#mat-option-0',
+    Inclusao: 'Inclusão',
+    Exclusao: 'Exclusão',
+    Alteracao: 'Alteração',
     //Consultando elementos vissíveis na tela
     txtNomeDaTela: 'Histórico de Envios',
     abaProcessamentoIndividual: 'Processamento Individual',

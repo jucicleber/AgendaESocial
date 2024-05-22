@@ -3,9 +3,11 @@ import {Given, When, Then} from '@badeball/cypress-cucumber-preprocessor'
 import loginPages from '../../pages/Login/login.pages';
 import consultarHistoricoDeEnviosPages from '../../pages/consultarHistoricoDeenvios/consultarHistoricoDeEnvios.pages';
 import vincularRegraBeneficioESocialPages from '../../pages/vincularRegraBeneficioESocial/vincularRegraBeneficioESocial.pages';
-import inputs from "../../../fixtures/input.json"
-const eventosExclusao = ['1000','1005','1020'];
-const eventosInclusao = ['2416']
+
+const eventosExclusao = ['1000','1005'];
+const eventosInclusao = ['2416','2405'];
+const eventosAlteracao = ['1010','2200']; 
+const operacao = ['0','1','2']//0 = Inclusão, 1 = Alteração, 2 = Exclusão
 
 Given("O usuário estar autenticado no sistema para acessar o histórico de envios", () => {
     loginPages.LoginComSelecaoDeOrigemDeDados();
@@ -19,15 +21,14 @@ Then("Deve verificar a presença de todos os elementos na tela de histórico", (
 
 //Scenario 2
 When("Realizar a consulta do evento com a operação de exclusão", () =>{
-    consultarHistoricoDeEnviosPages.SelecionaEventoComOperacaoExclusao(eventosExclusao,inputs.operacao.exclusao);
+    consultarHistoricoDeEnviosPages.SelecionaEventoComOperacaoExclusao(eventosExclusao,operacao);
 })
 
 //Scenario 3
 When("Realizar a consulta do evento com a operação de inclusão",() => {
-    consultarHistoricoDeEnviosPages.PesquisarHistoricoEnvio('2416',inputs.operacao.inclusao)
-    //consultarHistoricoDeEnviosPages.SelecionaEventoComOperacaoInclusao(eventosInclusao,inputs.operacao.inclusao)
-    consultarHistoricoDeEnviosPages.LerTableHistorico()
-})
+    //consultarHistoricoDeEnviosPages.SelecionaEventoComOperacaoInclusao(eventosInclusao,operacao)
+    consultarHistoricoDeEnviosPages.SelecionaEventoComOperacaoAlteracao(eventosAlteracao,operacao)
+})  
 //Scenario 4
 When("Realizar uma consulta que não encontre o evento", () => {
     //consultarHistoricoDeEnviosPages.SelecionaEventoMasNaoEncontra()
