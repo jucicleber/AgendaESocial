@@ -5,6 +5,7 @@ export const elements = {
     selectItensPorpagina: '[ng-reflect-aria-label="Itens por página:"]',
     selectExclusao: '#mat-option-2',
     selectinclusao: '#mat-option-0',
+    selectAlteracao: '#mat-option-1',
     Inclusao: 'Inclusão',
     Exclusao: 'Exclusão',
     Alteracao: 'Alteração',

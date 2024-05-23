@@ -15,7 +15,7 @@ Feature: Consultar histórico de envios
 
     Scenario: Consultar evento passando a operação de inclusão
         
-        When Realizar a consulta do evento com a operação de inclusão
+        When Realizar a consulta do evento com a operação de alteração
    
     # Scenario: Realizar uma consulta que não encontre nenhum evento
 
