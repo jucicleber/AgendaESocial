@@ -34,5 +34,5 @@ export const elements = {
     txtItensPorPagina: 'Itens por página:',
     txtLimitadorDePaginas: '.mat-paginator-range-label',
     eventoInexistente: "102030",
-    mensagemDeEventoNaoEncontrado: "Nenhum evento enviado!",
+    mensagemDeEventoNaoEncontrado: "Nenhum registro foi encontrado!",
 }
