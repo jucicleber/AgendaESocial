@@ -80,6 +80,7 @@ class VincularRegraBeneficioESocial{
    cy.get(elements.paginadorUltimaPagina).should('be.visible')
   }
 
+
 }
 
 

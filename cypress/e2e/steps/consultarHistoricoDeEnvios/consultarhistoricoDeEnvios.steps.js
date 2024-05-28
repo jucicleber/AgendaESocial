@@ -16,7 +16,8 @@ Given("O usuário estar autenticado no sistema para acessar o histórico de envi
 
 //Scenario 1
 Then("Deve verificar a presença de todos os elementos na tela de histórico", () => {
-    consultarHistoricoDeEnviosPages.VerificarCampos();
+    consultarHistoricoDeEnviosPages.PesquisarHistoricoEnvio('2200', '0')
+    consultarHistoricoDeEnviosPages.VerificarCamposParte1();
 })
 
 //Scenario 

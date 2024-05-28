@@ -5,13 +5,13 @@ class consultarHistoricoDeEnvios{
     realizarLogincomSelecaoDeorigemDeDados(){
         loginPages.LoginComSelecaoDeOrigemDeDados();
     }   
-    VerificarCampos(){
+    VerificarCamposParte1(){
         cy.get('h1').contains(elements.txtNomeDaTela).should('be.visible')   
         cy.contains(elements.abaProcessamentoIndividual).should('be.visible')
         cy.contains(elements.abaProcessamentoEmLote).should('be.visible')
         cy.contains(elements.btnBaixarLogDeEnvio).should('be.visible')
         cy.get(elements.inputEvento).should('be.visible')
-        cy.contains(elements.inputOperacao).should('be.visible')
+        cy.get(elements.inputOperacao).should('be.visible')
         cy.get(elements.inputDataEnvio).should('be.visible')
         cy.get(elements.inputStatus).should('be.visible')
         cy.get(elements.colunaEvento).should('be.visible')
@@ -22,6 +22,7 @@ class consultarHistoricoDeEnvios{
         cy.get(elements.colunaStatusRetornoProcessamento).should('be.visible')
         cy.get(elements.colunaUsuario).should('be.visible')
         cy.get(elements.colunaOpcoes).should('be.visible')
+        cy.get(elements.ultimaPágina).should('be.visible')
         cy.contains(elements.txtItensPorPagina).should('be.visible')
         cy.get(elements.selectItensPorpagina).should('be.visible')
         cy.get(elements.txtLimitadorDePaginas).should('be.visible')
@@ -30,6 +31,9 @@ class consultarHistoricoDeEnvios{
         cy.get(elements.proximaPagina).should('be.visible')
         cy.get(elements.ultimaPágina).should('be.visible')
     }
+    
+    
+
     
  
     SelecionaEventoComOperacaoExclusao(eventosExclusao,operacao){
