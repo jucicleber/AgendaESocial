@@ -31,11 +31,10 @@ class consultarHistoricoDeEnvios{
         cy.get(elements.proximaPagina).should('be.visible')
         cy.get(elements.ultimaPágina).should('be.visible')
     }
-    
-    
-
-    
- 
+    ClickBotaoPesquisar(){
+        cy.contains(elements.btnPesquisar).click()
+     }
+     
     SelecionaEventoComOperacaoExclusao(eventosExclusao,operacao){
     eventosExclusao.forEach(evento => {
         cy.log('vetor do evento',eventosExclusao)
@@ -53,11 +52,12 @@ class consultarHistoricoDeEnvios{
                 }
             }
         )}
-        // Limpa o campo de evento
-        cy.get(elements.inputEvento).clear();
         }); 
     }
 
+
+
+    //
     PesquisarHistoricoEnvio(evento, operacao) {
         // Acessa a grid passando evento e operação como parâmetro da função
         cy.get(elements.inputEvento).click().clear();

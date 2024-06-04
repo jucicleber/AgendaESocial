@@ -6,7 +6,9 @@ import vincularRegraBeneficioESocialPages from '../../pages/vincularRegraBenefic
 
 const eventosExclusao = ['1000','1005'];
 const eventosInclusao = ['2416','2405'];
-const eventosAlteracao = ['1010','2200','2299']; 
+const eventoInclusaoParaValidarCampos = '2200';
+const selecionandoOperacaoInclusao = '0';
+const eventosAlteracao = ['1010','2299']; 
 const operacao = ['0','1','2']//0 = Inclusão, 1 = Alteração, 2 = Exclusão
 
 Given("O usuário estar autenticado no sistema para acessar o histórico de envios", () => {
@@ -16,7 +18,7 @@ Given("O usuário estar autenticado no sistema para acessar o histórico de envi
 
 //Scenario 1
 Then("Deve verificar a presença de todos os elementos na tela de histórico", () => {
-    consultarHistoricoDeEnviosPages.PesquisarHistoricoEnvio('2200', '0')
+    consultarHistoricoDeEnviosPages.PesquisarHistoricoEnvio(eventoInclusaoParaValidarCampos,selecionandoOperacaoInclusao)
     consultarHistoricoDeEnviosPages.VerificarCamposParte1();
 })
 
